@@ -1,0 +1,158 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+			<style>
+				div.a{
+				text-align: center;
+				}
+			</style>
+		</head>
+	<font color="white">
+			<div class="a">
+		   		<h1> O'Hare Consultancy </h1>
+			</div>
+
+			<div class="topnav">
+				<a href="index.html">Home</a>
+				<a href="cv.html">Curriculum Vitae</a>
+				<a href="interests.html">Interests</a>
+				<a href="ebus1.html">Ebusiness Calculator</a>
+				<a href="aboutconsulting.html">About Consulting</a>
+			</div>
+
+			<style>
+	body {
+	  background-image: url('rugby.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+	</style>
+
+	<body>
+
+		<div class="sports">
+			<style>
+				.sports{
+					text-align: center;
+				}
+			</style>
+		<font color="white">
+			<h1> Rugby: </h1>
+			<font size="+2">
+			Rugby has been a very big and important aspect of my life from a very young age. I started playing rugby when I <br>
+			was about 5 years old at my local club, Waterpark R.F.C., a club where my family before me had spent their <br>
+			years playing at. The club has produced excellent teams throughout the years that have gone on to win provincial and <br>
+			natioal titles such as the PAN Munster U16, U18 and the All-Ireland U18 Cup as well as dominating the East Munster Cup<br>
+			throughout the past few years. I loved every second of my time at Waterpark and remember fondly all the memories I have<br>
+			 of playing in the Black and Red Jersey.
+			 <hr width="80%" size="3" />
+
+			 <h2> Hurling:</h2>
+			 Another of my main sporting interests would have to be hurling. The GAA has a big influence in my life. I play for Ballgunner, my local club,<br>
+			 and through it I've made lifelong friends. I also use hurling not only as a form of excercise but also as an outlet or break away from all the<br>
+			 other things in my life whether that is from college work or part time work. It acts as a stress reliever and even anytime that I may<br>
+			 have worries all I have to do is go outside and pick up the hurley and it does the world of good.
+			 <hr width="80%" size="3" />
+
+			<h2> Gaelic Football:</h2>
+			I've always been passionate about playing football but out of all my sports it's the one where I can relax the most and just enjoy playing<br>
+			because growing up in Waterford football wasn't exactly a competitive sport. It's mostly played in the summer for a bit of a laugh but that's<br>
+			one of the reasons I enjoy it so much. I don't have to take it as seriously as my rugby or hurling as there isn't a lot of competitive <br>
+			tournaments. It's mostly just played as challenge matches between the differnt parishes. It's always good to play a sport where there isn't<br>
+			the added pressure of trying to win a cup or a league and that's why I've love my time playing for Gailltir.
+			<hr width="80%" size="3" />
+			</font>
+		</font>
+	</div>
+
+	<div class="slideshow">
+	<style type="text/css">
+	#container {
+	  overflow: hidden;
+	  width: 800px;
+	  height: -2000px;
+	  margin: 0 auto;
+	  cursor: pointer;
+	  margin-top: 150px;
+	}
+
+	#imgs {
+	  display: block;
+	  padding: 0;
+	  width: 200%;
+	}
+
+	#imgs li {
+	  padding-right: 10px;
+	  display: inline-block;
+	 *display:inline;
+	}
+
+	#imgs img {
+	  width: 160px;
+	  height: -2000px;
+	}
+
+	.title {
+	  display: block;
+	  width: 100%;
+	  height: -2000px;
+	  line-height: 38px;
+	  color: white;
+	  font-weight: bold;
+	  text-align: center;
+	  background: #ddd;
+	}
+	</style>
+	</head>
+	<body>
+	<div id="jquery-script-menu">
+	<div class="jquery-script-center">
+
+	<div class="jquery-script-clear"></div>
+	</div>
+	<div id="container"> <span class="title">Interests</span>
+	  <ul id="imgs">
+	    <li><img src="soccer.jpg" alt="canada flag" /></li>
+	    <li><img src="basketball.jpg" alt="" /></li>
+	    <li><img src="running.jpg" alt="Boston" /></li>
+	    <li><img src="football.jpg" alt="" /></li>
+	    <li><img src="tennis.jpg" alt="Times Square" /></li>
+	    <li><img src="rugby.jpg" alt="Rugby Stadium" /></li>
+	    <li><img src="weights.jpg" alt="New York City" /></li>
+	  </ul>
+	  <span class="title">Interests</span> </div>
+	<div id="controler"> </div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="ImageScroll.js"></script> 
+	<script type="text/javascript">
+
+	  $('#imgs').imageScroll({
+	    orientation:"left",
+	    speed:600,
+	    interval:1000,
+	    hoverPause:true,
+	    callback:function(){
+	      var ordinal = $(this).find("img").first().attr("src");
+	      <!-- console.log(ordinal); -->
+	      $(this).next("span").text(""+ordinal+"!");
+	    }
+	  });
+
+	  </script><script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36251023-1']);
+	  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	</body>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http.//www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+<font color="white">
+	<div class="a">
+		<h1> Ebusiness Calculator: </h1>
+	</div>
+</font>
+
+<style>
+	div.a{
+		text-align: center;
+	}
+</style>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+	<div class="topnav">
+		<a href="index.html">Home</a>
+		<a href="cv.html">Curriculum Vitae</a>
+		<a href="interests.html">Interests</a>
+		<a href="ebus1.html">Ebusiness Calculator</a>
+		<a href="aboutconsulting.html">About Consulting</a>
+	</div>
+
+	<style>
+body {
+  background-image: url('consulting1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<div class="form">
+        <form name="intCalc" method="post" action="eBus2.php">
+           	<center>
+        		<h1>Consulting Fee</h1>  
+            </center>
+           	<center>
+            	<table cellspacing="10">
+                	<tr>
+                    	<td><b>Type of consulting</b></td>
+               		</tr>
+                	<tr>
+                    	<td>Hyperautomation @ $200</td>
+                    <td><input type="radio" id="Hyperautomation" name="rdoGroup" value="200"  required /></td>
+                	</tr>
+                	<tr>
+                    	<td>Multiexperience @ $500</td>
+                    	<td><input type="radio" id="Multiexperience" name="rdoGroup" value="500"  /></td>
+                	</tr>
+                	<tr>
+                   		<td>Distributed Cloud @ $1000</td>
+                    	<td><input type="radio" id="DistributedCloud" name="rdoGroup" value="1000" /></td>
+                	</tr>
+            	</table>
+        	</center>
+        	<br/>
+            <center>
+                <table cellspacing="10">
+            		<tr>
+                    	<td><b></b></td>
+                   		<td><b>Amount</b></td>
+            		</tr>
+                	<tr>
+                    	<td>Sub Total</td>
+                    	<td><input type="text" id="txtSubTot" name="txtSub" readonly  required/></td>
+                	</tr>
+                	<tr>
+                    	<td>Discount @ 5%</td>
+                    	<td><input type="text" id="txtDisc" name="txtDisc" readonly  required/></td>
+                	</tr>
+                	<tr>
+                    	<td>+ VAT @ 20%</td>
+                    	<td><input type="text" id="txtVAT" name="txtVAT" readonly required /></td>
+                	</tr>
+                	<tr>
+                    	<td>Total</td>
+                    	<td><input type="text" id="txtTotal" name="txtTotal" value="" readonly required/></td>
+                	</tr>
+            	</table>
+       		 </center>
+     
+     		<br/>
+            <center>
+            	<input type="button" name="btnCalc" id="btnCalc" onclick="calcSub()" value="Calculate Amount"/>
+            	<input type="button" name="btnClear" id="btnClear" onclick="AmountClear()" value="Clear"/>
+           
+         
+       		</center>
+        </form>
+</div>
+        </center>
+
+        <script type="text/javascript">
+                function calcSub(){
+                   
+                    var subAmount = parseFloat(document.getElementById('txtSubTot').value);
+                    var Hyperautomation = parseFloat(document.getElementById('Hyperautomation').value);
+                    var Multiexperience = parseFloat(document.getElementById('Multiexperience').value);
+                    var DistributedCloud = parseFloat(document.getElementById('DistributedCloud').value);
+                 
+                   
+                    if (document.getElementById('Hyperautomation').checked) {
+                        document.intCalc.txtSubTot.value = Hyperautomation;
+                        subAmount = Hyperautomation;
+                        calculation(subAmount);
+                     
+                    }
+                   else if (document.getElementById('Multiexperience').checked) {
+                        document.intCalc.txtSubTot.value = Multiexperience;
+                        subAmount = Multiexperience;
+                        calculation(subAmount);
+                     
+                    }
+                    else if (document.getElementById('DistributedCloud').checked) {
+                        document.intCalc.txtSubTot.value = DistributedCloud;
+                        subAmount = DistributedCloud;
+                        calculation(subAmount);
+                    }
+                }
+             
+               
+                function calculation(parmsTotal) {
+                    var subTotal = parseFloat(parmsTotal);
+                    var discCalc = parseFloat(subTotal * .05);
+                    var vatCalc= parseFloat(subTotal * .20);  
+                    var total = parseFloat(subTotal - discCalc + vatCalc);
+                 
+                   
+                    document.intCalc.txtDisc.value = discCalc;
+                    document.intCalc.txtVAT.value = vatCalc;
+                    document.intCalc.txtTotal.value = total;
+                }
+             
+                function AmountClear() {
+                    document.getElementById("txtSubTot").value="";
+                    document.getElementById("txtDisc").value="";
+                    document.getElementById("txtVAT").value="";
+                    document.getElementById("txtTotal").value="";
+                }
+                 
+        </script>
+    
+    </html>
+
